@@ -12,8 +12,11 @@ Let's make custom paper reading assistant!!
 **2026년 3월 10일**에 나온 논문의 내용(실험 당시 5일전)에 대해 Naive버전과 RAG버전을 비교하였음. 
 **Naive버전은 논문의 이름부터 틀리는 반면 RAG를 사용하였을 때는 전반적인 방법론도 찾는 것을 볼 수 있었음.**
 
-![alt text](image.png)
+![alt text](img/naive_vs_rag.png)
+
 source : https://arxiv.org/pdf/2603.09078
+
+> RAG가 성공적으로 작동하였다는 사실은 확인하였고 추후 RAG 성능 및 퀄리티를 디벨로할 예정
 
 ## 2. Repository Structure
 ```text
