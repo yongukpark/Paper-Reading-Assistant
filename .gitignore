@@ -10,6 +10,7 @@ env/
 
 # Environment variables
 .env
+.vscode
 
 # Tooling caches
 .pytest_cache/
@@ -19,5 +20,6 @@ env/
 .DS_Store
 
 # Project artifacts
-data/embeddings/
+data/paper_context_embeddings/
 data/raw/
+data/new/

@@ -6,7 +6,7 @@ from langchain_community.document_loaders import PyPDFLoader
 def load_pdf_files():
     print("Loading PDF files from data directory...")
 
-    pdf_files = glob(os.path.join("data/raw", "*.pdf"))
+    pdf_files = glob(os.path.join("data/new", "*.pdf"))
     print(pdf_files)
 
     data = []
