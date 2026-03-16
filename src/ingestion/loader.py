@@ -2,6 +2,7 @@ import os
 from glob import glob
 
 from langchain_community.document_loaders import PyPDFLoader
+
 from config import RAW_DATA_DIR
 
 

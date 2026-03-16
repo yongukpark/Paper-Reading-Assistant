@@ -1,4 +1,4 @@
-from langchain_text_splitters import CharacterTextSplitter   
+from langchain_text_splitters import CharacterTextSplitter
 
 def chunk_text_data(data):
     print("Chunking text data...")

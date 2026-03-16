@@ -1,20 +1,18 @@
-from langchain_huggingface import HuggingFaceEmbeddings
+import os
+
+import torch
+from dotenv import load_dotenv
 from langchain_chroma import Chroma
 from tqdm import tqdm
-from dotenv import load_dotenv
-import torch
-import os
-from config import EMBEDDING_MODEL_NAME, EMBEDDING_ENCODE_KWARGS, EMBEDDING_MODEL_KWARGS, VECTORSTORE_PERSIST_DIRECTORY
+
+from config import VECTORSTORE_PERSIST_DIRECTORY
+from src.embedding_model import build_embeddings
 
 load_dotenv()
 
 def generate_embeddings(new_documents, batch_size=2): # 배치 사이즈 조절 가능
     print("Initializing Embedding Model...")
-    embeddings_model = HuggingFaceEmbeddings(
-        model_name=EMBEDDING_MODEL_NAME,
-        encode_kwargs=EMBEDDING_ENCODE_KWARGS,
-        model_kwargs=EMBEDDING_MODEL_KWARGS
-    )
+    embeddings_model = build_embeddings()
     
     # tqdm으로 진행 상황 표시
     print(f"Generating embeddings for {len(new_documents)} documents...")
