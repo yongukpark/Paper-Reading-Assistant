@@ -2,23 +2,7 @@
 Let's make custom paper reading assistant!!
 논문 리딩 어시스턴트를 만드는 것을 목표로 합니다!!
 
-## 1. Progress
-### Prototype 완성 / 전체적인 파이프라인 형성
-* load -> chunking -> embedding  
-* retrieve -> LLM
-
-위 형태의 파이프라인을 정하고 실제 RAG가 제대로 동작하는지 확인하였음
-
-**2026년 3월 10일**에 나온 논문의 내용(실험 당시 5일전)에 대해 Naive버전과 RAG버전을 비교하였음. 
-**Naive버전은 논문의 이름부터 틀리는 반면 RAG를 사용하였을 때는 전반적인 방법론도 찾는 것을 볼 수 있었음.**
-
-![alt text](img/naive_vs_rag.png)
-
-source : https://arxiv.org/pdf/2603.09078
-
-> RAG가 성공적으로 작동하였다는 사실은 확인하였고 추후 RAG 성능 및 퀄리티를 디벨로할 예정
-
-## 2. Repository Structure
+## 1. Repository Structure
 ```text
 PRA/
 ├── README.md
@@ -45,7 +29,8 @@ PRA/
 └── .env
 ```
 
-## 3. File Roles
+
+## 2. File Roles
 - `ingest.py`: PDF 로드 -> 청킹 -> 임베딩 생성까지의 인덱싱 파이프라인 실행
 - `main.py`: 검색/질의응답 실행을 위한 메인 엔트리 포인트
 - `config.py`: 임베딩 모델, 저장 경로, 배치 크기 같은 공통 설정 관리

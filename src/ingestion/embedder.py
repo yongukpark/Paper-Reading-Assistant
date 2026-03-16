@@ -22,7 +22,7 @@ def generate_embeddings(new_documents, batch_size=2): # 배치 사이즈 조절 
     if batch_size < 1:
         raise ValueError("batch_size must be greater than 0")
 
-    if os.path.exists("./data/paper_context_embeddings"):
+    if os.path.exists(VECTORSTORE_PERSIST_DIRECTORY):
         print("Loading existing embeddings...")
         vectorstore = Chroma(
             collection_name="paper_collection",
